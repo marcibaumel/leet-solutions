@@ -2,7 +2,7 @@
 {
     public class TwoSum
     {
-        public static int[] Solution(int[] nums, int target)
+        public static int[]? Solution(int[] nums, int target)
         {
             Dictionary<int, int> numIndices = new Dictionary<int, int>();
 
@@ -11,7 +11,7 @@
                 int complement = target - nums[i];
                 if (numIndices.ContainsKey(complement))
                 {
-                    return new int[] { numIndices[complement], i };
+                    return [numIndices[complement], i];
                 }
                 if (!numIndices.ContainsKey(nums[i]))
                 {
