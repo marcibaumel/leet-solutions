@@ -8,6 +8,37 @@ namespace Problems
 {
     public class Adium
     {
+        static void Main(string[] args)
+        {
+            FizzBuzz(100);
+        }
+
+        public static void FizzBuzz(int limit)
+        {
+            for (int i = 0; i < limit; i++)
+            {
+                String output = "";
+
+                if (i % 3 == 0)
+                {
+                    output += "Fizz";
+                }
+                if (i % 5 == 0)
+                {
+                    output += "Buzz";
+                }
+
+                if (output.Trim().Length == 0)
+                {
+                    Console.WriteLine(i);
+                }
+                else
+                {
+                    Console.WriteLine(output);
+                }
+            }
+        }
+
         public static int GetMostCommonNumber(int[] nums)
         {
             Dictionary<int, int> numberOccurrences = new Dictionary<int, int>();
