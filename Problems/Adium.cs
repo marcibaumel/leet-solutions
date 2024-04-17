@@ -129,6 +129,13 @@ namespace Problems
             return true;
         }
 
+        public static string Reverse(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
         public static bool IsPrime_v2(int num)
         {
             if (num <= 1)
