@@ -1,4 +1,4 @@
-import { twoSum } from '../1-twoSum';
+import { twoSum } from '../problems/1-twoSum';
 
 describe('Two sum', () => {
     it('Should return indices of the two numbers ', () => {
