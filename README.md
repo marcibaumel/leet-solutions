@@ -1,5 +1,7 @@
 # leet-solutions
 
+[![leet solutions test](https://github.com/marcibaumel/leet-solutions/actions/workflows/tests.yml/badge.svg)](https://github.com/marcibaumel/leet-solutions/actions/workflows/tests.yml)
+
 To install dependencies:
 
 ```bash
