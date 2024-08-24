@@ -19,13 +19,14 @@ jobs:
         - name: Install Bun
           run: |
             curl -fsSL https://bun.sh/install | bash
+            echo "$HOME/.bun/bin" >> $GITHUB_PATH
   
-        - name: Add Bun to PATH
-          run: echo "$(bun bin)" >> $GITHUB_PATH
+        - name: Verify Bun Installation
+          run: bun --version
   
         - name: Install Dependencies
           run: bun install
   
         - name: Run Tests
           run: bun test
-          working-directory: test
+          working-directory: __test__
