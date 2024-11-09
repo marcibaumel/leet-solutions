@@ -1,4 +1,4 @@
-import { isPalindromeNumber, isPalindromeString } from '../app';
+import { isPalindromeNumber, isPalindromeString } from '../common/Palindrome_Number';
 
 describe('Add function test', () => {
     it('Should return the parameter number', () => {

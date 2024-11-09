@@ -1,4 +1,4 @@
-import { ListNode, hasCycle } from '../app';
+import { ListNode, hasCycle } from '../common/Linked_List_Cycle';
 
 describe('Linked list cycle function tests', () => {
     it('Should return true [3,2,0,-4 => 2]', () => {

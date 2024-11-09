@@ -1,4 +1,4 @@
-import { ListNode, middleNode } from '../app';
+import { ListNode, middleNode } from '../common/Middle_of_the_Linked_List';
 
 describe('Middle of the Linked List function test', () => {
     it('Should return the middle part of the Linked list [1,2,3,4,5] => [3, 4, 5]', () => {
@@ -35,9 +35,9 @@ describe('Middle of the Linked List function test', () => {
 
     it('Should return the middle part of the Linked list [1] => [1]', () => {
         const node1 = new ListNode(1);
-        
+
         node1.next = null;
-        
+
         expect(middleNode(node1)).toBe(node1);
     });
 });
