@@ -1,0 +1,51 @@
+name: leet solutions test
+
+on:
+    push:
+      branches:
+        - '*'
+    pull_request:
+      branches:
+        - main
+    schedule:
+        - cron: '0 6 * * *'  # Runs every day at 6:00 AM UTC
+        - cron: '0 18 * * *' # Runs every day at 6:00 PM UTC
+  
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+  test:
+    runs-on: ubuntu-latest
+    needs: setup  # This job will only run after 'setup' job is completed
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Run tests
+        run: bun test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test  # This job will only run after 'test' job is completed
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Build project
+        run: echo "Build step can be expanded as needed"
